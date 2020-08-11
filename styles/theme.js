@@ -1,23 +1,22 @@
-import { createMuiTheme, makeStyles } from '@material-ui/core/styles';
-import purple from '@material-ui/core/colors/purple';
-import green from '@material-ui/core/colors/green';
+import { createMuiTheme } from '@material-ui/core/styles';
+import red from '@material-ui/core/colors/red';
 
-
-export const theme = createMuiTheme({
+// Create a theme instance.
+const theme = createMuiTheme({
   palette: {
     primary: {
-      main: purple[500],
+      main: '#556cd6',
     },
     secondary: {
-      main: green[500],
+      main: '#19857b',
+    },
+    error: {
+      main: red.A400,
+    },
+    background: {
+      default: '#fff',
     },
   },
 });
 
-export const useStyles = makeStyles((theme) => ({
-    root: {
-      ...theme.typography.button,
-      backgroundColor: theme.palette.primary.main,
-      padding: theme.spacing(1),
-    },
-  }));
+export default theme;

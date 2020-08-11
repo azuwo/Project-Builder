@@ -1,5 +1,4 @@
-import firebase from 'firebase/app'
-require ('firebase/auth')
+import firebase from 'firebase'
 
 const config = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_PUBLIC_API_KEY,
