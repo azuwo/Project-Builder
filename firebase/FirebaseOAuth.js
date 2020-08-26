@@ -1,4 +1,5 @@
 import firebase from 'firebase/app'
+import 'firebase/auth'
 import initFirebase from './initFirebase'
 
 initFirebase()
@@ -14,11 +15,11 @@ export const onAuthStateChange = (onChange) => {
 
 export const googleSignout = () => {
   firebase.auth().signOut()
- 
+
   .then(function() {
      console.log('Signout Succesfull')
   }, function(error) {
-     console.log('Signout Failed')  
+     console.log('Signout Failed')
      console.log(error.message);
   });
 }
